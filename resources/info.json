@@ -1,0 +1,35 @@
+{
+    "name": "",
+    "runat": "masospjfk8sargokpod",
+    "bld": {
+        "tool": "maven",
+        "version": "3-8-2",
+        "targets": [
+            "clean",
+            "package"
+        ],
+        "vcs": {
+            "scr": "https://github.com/srikrishnaprakash/ra-cc-sb.git",
+            "revision": "develop"
+        }
+    },
+    "sca": {
+        "tool": "sonar",
+        "projectbasedir": "$WORKSPACE",
+        "sonarhost": "http://localhost:9000/",
+        "projectkey": "Report name from codeso",
+        "binarypath": "$WORKSPACE/target/classes/"
+    },
+    "sst": {
+        "tool": "spectralops"
+    },
+    "dst": {
+        "tool": ""
+    },
+    "arf": "https://niiih.jfrog.io/artifactory/example-repo-local/",
+    "dep": {
+        "tool": "argocd",
+        "action": "",
+        "envrmnt":""
+    }
+}
