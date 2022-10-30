@@ -9,7 +9,7 @@ class MavenManager {
 
     String mts = "mvn"
 
-    BuildManager(DSL pipelineSteps) {
+    MavenManager(DSL pipelineSteps) {
         this.pipelineSteps = pipelineSteps
     }
 
