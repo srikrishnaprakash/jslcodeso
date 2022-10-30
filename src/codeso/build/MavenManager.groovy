@@ -23,7 +23,7 @@ class MavenManager {
 		}
         pipelineSteps.echo "$mts"
 		pipelineSteps.stage("Maven Build") {
-            pipelineSteps.container('$bldParams.tool-$bldParams.version') {
+            pipelineSteps.container('maven-3-8-2') {
                 sh "$mts"
             }
         }

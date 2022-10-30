@@ -13,7 +13,7 @@ class SonarManager {
     }
 
     void scan(scaParams) {
-        pipelineSteps.container('$scaParams.tool-scanr') {
+        pipelineSteps.container('sonar-scanr') {
             pipelineSteps.sh('sonar-scanner -Dsonar.login=admin ' +
                                 ' -Dsonar.password=Admin#2022' +
                                 " -Dsonar.projectBaseDir=${scaParams.projectbasedir}" +
