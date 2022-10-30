@@ -1,3 +1,4 @@
+@Library('codso-jsl')
 import codeso.build.BuildManager
 import codeso.sca.SCAManager
 
