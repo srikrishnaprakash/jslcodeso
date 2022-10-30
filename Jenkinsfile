@@ -19,8 +19,8 @@ pipeline {
 		}
 		stage('Preparing') {
 			steps {
-				podTemplate(label: 'masospjfk8sargokpod') {
-					node('masospjfk8sargokpod') {
+				podTemplate(label: 'mss') {
+					node('mss') {
 						script {
 							if (iParams.bld != null) {
 								BuildManager bldMgr = new BuildManager(steps)
