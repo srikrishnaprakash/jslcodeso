@@ -1,4 +1,4 @@
-package codeso.build
+package codeso.sca
 
 import org.jenkinsci.plugins.workflow.cps.DSL
 
