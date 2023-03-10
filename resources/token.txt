@@ -1,0 +1,1 @@
+kubectl describe secret $(kubectl describe serviceaccount k8s-jkins-sa --namespace=learnjkc | grep Token | awk '{print $2}') --namespace=learnjkc

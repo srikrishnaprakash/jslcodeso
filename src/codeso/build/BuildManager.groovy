@@ -13,13 +13,11 @@ class BuildManager {
 
     void execute(bldParams) {
         switch (bldParams.bld.tool) {
-        case 'maven':
-            MavenManager mvnMgr = new MavenManager(pipelineSteps)
-            mvnMgr.manage(bldParams)
+        case 'Maven':
+            pipelineSteps.sh "mvn package" 
             break
-        case 'gradle':
-            GradleManager grdMgr = new GradleManager(pipelineSteps)
-            grdMgr.manage(bldParams)
+        case 'Gradle':
+            pipelineSteps.echo "Gradle under implementation..."
             break
         }
     }
