@@ -29,7 +29,7 @@ pipeline {
                                 i=0
                                 res[stg].each{entry -> println "$entry.value"
                                     println(entry.key)
-                                    println(entry.value))
+                                    println(entry.value)
                                     println(i)
                                     i++ 
                                 }
