@@ -18,14 +18,7 @@ pipeline {
                         mgr = new Manager(steps)
                         for (stg in res.keySet()) {
                             stage(stg) {
-                                def i = 0
-                                
-                                res[stg].each{entry -> println "$entry.value"
-                                    println(entry.key)
-                                    println(entry.value)
-                                    println(i)
-                                    i++ 
-                                }
+                                mgr.process(res[stg])
                             }
                         }
                     }
