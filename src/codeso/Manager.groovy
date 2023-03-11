@@ -12,12 +12,14 @@ class Manager {
     }
     void process(stageMap){
         stageMap.each{key, value ->
+            pipelineSteps.echo("Inside process:: $key:: $value")
             switch (key) {
                 case 'github':
-                    pipelineSteps.git branch: branchName, credentialsId: GHID, url: value
+                    pipelineSteps.git branch: 'develop', credentialsId: 'GHID', url: "$value"
                     break
                 case 'mvn':
-                    pipelineSteps.sh value
+                    pipelineSteps.sh "$value"
+                    break
             }
         }
     }
