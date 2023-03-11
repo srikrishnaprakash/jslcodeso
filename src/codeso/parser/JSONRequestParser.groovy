@@ -20,11 +20,11 @@ class JSONRequestParser {
             switch(tob['group']) {
                 case "SCM":
                     iVal[tob['entity']] = getRepoDetails(tob)
-                    stageM[tob['sname']] = iVal
+                    stageM[tob['ciname']] = iVal
                     break
                 case "BUILD":
                     iVal[tob['entity']] = getBuildDetails(tob)
-                    stageM[tob['sname']] = iVal
+                    stageM[tob['ciname']] = iVal
                     break
             }
         }

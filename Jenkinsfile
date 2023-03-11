@@ -1,5 +1,5 @@
 @Library('jslcodso')
-import codeso.Manager
+import codeso.build.BuildManager
 import codeso.parser.JSONRequestParser
 
 
@@ -15,10 +15,10 @@ pipeline {
                         def cjp = new JSONRequestParser(steps, paramSpec)
                         def res = cjp.populateStagesDetail()
                         println("Going for loop")
-                        mgr = new Manager(steps)
+                        bldMgr = new BuildManager(steps)
                         for (stg in res.keySet()) {
                             stage(stg) {
-                                mgr.process(res[stg])
+                                bldMgr.process(res[stg])
                             }
                         }
                     }
