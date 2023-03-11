@@ -19,7 +19,7 @@ pipeline {
                         for (stg in res.keySet()) {
                             stage(stg) {
                                 i = 0
-                                for (stgD in stg.keySet()) {
+                                for (stgD in res[stg].keySet()) {
                                     println(stgD)
                                     println(stg[stgD])
                                     println(i)
