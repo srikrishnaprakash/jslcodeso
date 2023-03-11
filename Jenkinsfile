@@ -18,11 +18,13 @@ pipeline {
                         mgr = new Manager(steps)
                         for (stg in res.keySet()) {
                             stage(stg) {
-                                //mgr.process(stg)
                                 i = 0
-                                stg.each{key, value ->
-                                    println(key + ":: " + value + ":: " + i )
+                                for (stgD in stg.keySet()) {
+                                    println(stgD)
+                                    println(stg[stgD])
+                                    println(i)
                                     i++
+                                    //mgr.process(stg)s
                                 }
                                 //res[stg].each{entry -> println "$entry.value"}
                             }
