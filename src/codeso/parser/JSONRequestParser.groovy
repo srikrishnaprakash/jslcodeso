@@ -7,7 +7,7 @@ class JSONRequestParser {
     DSL pipelineSteps
     Map stagesParam
 
-    JsonParser(DSL steps, Map params) {
+    JSONRequestParser(DSL steps, Map params) {
         this.pipelineSteps = steps
         this.stagesParam = params
     }

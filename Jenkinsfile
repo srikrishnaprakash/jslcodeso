@@ -1,6 +1,5 @@
-@Library('codso-jsl')
+@Library('jslcodso')
 import codeso.parser.JSONRequestParser
-import codeso.build.BuildManager
 
 
 pipeline {
