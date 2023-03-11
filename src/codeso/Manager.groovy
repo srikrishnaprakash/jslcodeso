@@ -15,7 +15,7 @@ class Manager {
             pipelineSteps.echo("Inside process:: $key:: $value")
             switch (key) {
                 case 'github':
-                    pipelineSteps.git branch: 'develop', credentialsId: 'GHID', url: "$value"
+                    pipelineSteps.git branch: 'main', credentialsId: 'GHID', url: "$value"
                     break
                 case 'mvn':
                     pipelineSteps.sh "$value"
