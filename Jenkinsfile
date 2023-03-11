@@ -15,7 +15,7 @@ pipeline {
                         def cjp = new JSONRequestParser(steps, paramSpec)
                         def res = cjp.populateStagesDetail()
                         println("Going for loop")
-                        mgr = new Manager()
+                        mgr = new Manager(steps)
                         for (stg in res.keySet()) {
                             stage(stg) {
                                 //Send this Value (Map) to the runner class to execute the action
