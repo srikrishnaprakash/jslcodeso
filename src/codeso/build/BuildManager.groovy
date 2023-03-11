@@ -13,7 +13,6 @@ class BuildManager {
 
     void process(stageMap){
         stageMap.each{key, value ->
-            pipelineSteps.echo("Inside process:: $key:: $value")
             switch (key) {
                 case 'github':
                     pipelineSteps.git branch: 'main', credentialsId: 'GHID', url: "$value"
