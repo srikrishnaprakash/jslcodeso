@@ -16,7 +16,7 @@ class JSONRequestParser {
         pipelineSteps.echo (stagesParam['name'])
         def stageM = [:]
         for (tob in stagesParam['stages'])  {
-            switch(tob['entity']) {
+            switch(tob['group']) {
                 case "SCM":
                     stageM[tob['sname']] = [ (tob['entity']): (getRepoDetails(tob)) ]
                     break
