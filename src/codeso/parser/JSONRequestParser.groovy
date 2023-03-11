@@ -19,7 +19,7 @@ class JSONRequestParser {
             iVal = [:]
             switch(tob['group']) {
                 case "SCM":
-                    iVal[tob['entity']] = (getRepoDetails(tob)
+                    iVal[tob['entity']] = getRepoDetails(tob)
                     stageM[tob['sname']] = iVal
                     break
                 case "BUILD":
