@@ -18,9 +18,13 @@ pipeline {
                         mgr = new Manager(steps)
                         for (stg in res.keySet()) {
                             stage(stg) {
-                                //Send this Value (Map) to the runner class to execute the action
-                                res[stg].each{entry -> println "$entry.value"}
-                                mgr.process(stg)
+                                //mgr.process(stg)
+                                i = 0
+                                stg.each{key, value ->
+                                    println(key + ":: " + value + ":: " + i )
+                                    i++
+                                }
+                                //res[stg].each{entry -> println "$entry.value"}
                             }
                         }
                     }

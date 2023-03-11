@@ -16,12 +16,15 @@ class JSONRequestParser {
         pipelineSteps.echo (stagesParam['name'])
         def stageM = [:]
         for (tob in stagesParam['stages'])  {
+            iVal = [:]
             switch(tob['group']) {
                 case "SCM":
-                    stageM[tob['sname']] = [ (tob['entity']): (getRepoDetails(tob)) ]
+                    iVal[tob['entity']] = (getRepoDetails(tob)
+                    stageM[tob['sname']] = iVal
                     break
                 case "BUILD":
-                    stageM[tob['sname']] = [ (tob['entity']): (getBuildDetails(tob)) ]
+                    iVal[tob['entity']] = getBuildDetails(tob)
+                    stageM[tob['sname']] = iVal
                     break
             }
         }
