@@ -19,14 +19,7 @@ pipeline {
                         for (stg in res.keySet()) {
                             stage(stg) {
                                 def i = 0
-                                for (stgD in res[stg].keySet()) {
-                                    println(stgD)
-                                    println(stg[stgD])
-                                    println(i)
-                                    i++
-                                    //mgr.process(res[stg])
-                                }
-                                i=0
+                                
                                 res[stg].each{entry -> println "$entry.value"
                                     println(entry.key)
                                     println(entry.value)
